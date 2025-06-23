@@ -4,23 +4,32 @@
     "slug": "HarvestPro",
     "version": "1.0.0",
     "orientation": "portrait",
-    "icon": "./assets/images/icon.png",
+    "icon": "./assets/images/ic_launcher.png",
     "scheme": "harvestpro",
-    "userInterfaceStyle": "automatic",
-    "newArchEnabled": true,
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
     "ios": {
       "supportsTablet": true
     },
     "android": {
+      "package": "com.madusanka098.HarvestPro",
       "adaptiveIcon": {
-        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "foregroundImage": "./assets/images/ic_launcher.png",
         "backgroundColor": "#ffffff"
       },
+      "permissions": [
+        "ACCESS_FINE_LOCATION",
+        "ACCESS_COARSE_LOCATION",
+        "FOREGROUND_SERVICE",
+        "INTERNET"
+      ],
       "edgeToEdgeEnabled": true
     },
     "web": {
-      "bundler": "metro",
-      "output": "static",
       "favicon": "./assets/images/favicon.png"
     },
     "plugins": [
@@ -28,13 +37,19 @@
       [
         "expo-splash-screen",
         {
-          "image": "./assets/images/splash-icon.png",
+          "image": "./assets/images/ic_launcher.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
         }
       ]
     ],
+    "extra": {
+      "eas": {
+        "projectId": "ae77346f-1f3b-4bb8-9098-6eae05266493"
+      },
+      "router": {}
+    },
     "experiments": {
       "typedRoutes": true
     }
